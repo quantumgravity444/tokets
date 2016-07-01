@@ -16,6 +16,6 @@ contract EventCreator {
     }
 
     mapping (address => address[]) public created;
-    event SaleCreated(address indexed _owner, address indexed saleAddr, address indexed eventAddr, uint256 retailPrice);
+    event SaleCreated(address indexed _owner, address indexed newSale, address indexed newEvent, uint256 retailPrice);
     event EventCreated(address indexed newEvent, string _description, string _eventTime, string _location, uint _retailPrice);
 }

@@ -35,6 +35,7 @@ contract Token {
     event Approval(address indexed _owner, address indexed _spender, uint256 _value);
 }
 
+
 contract StandardToken is Token {
 
     function transfer(address _to, uint256 _value) returns (bool success) {
@@ -75,6 +76,7 @@ contract StandardToken is Token {
     uint256 public totalSupply;
 }
 
+
 contract Tokets is StandardToken {
 
     string public description;                   // Description of the event
@@ -82,7 +84,13 @@ contract Tokets is StandardToken {
     string public location;                      // Location of the event venue
     uint256 public retailPrice;                  // Retail price of the event in wei
 
-    function Tokets(uint256 _availableTokets, string _description, string _eventTime, string _location, uint _retailPrice) {
+    function Tokets(
+        uint256 _availableTokets, 
+        string _description, 
+        string _eventTime, 
+        string _location, 
+        uint _retailPrice
+    ) {
         balances[msg.sender] = _availableTokets;                 // Give the creator all initial tokets
         totalSupply = _availableTokets;                          // Update total supply of tokets available for sale
         description = _description;                              // Set the description for display purposes

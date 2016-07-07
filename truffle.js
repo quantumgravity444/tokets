@@ -9,11 +9,6 @@ module.exports = {
     ],
     "images/": "images/"
   },
-  deploy: [
-    "Tokets",
-    "ToketSales",
-    "EventCreator"
-  ],
   rpc: {
     host: "localhost",
     port: 8545
